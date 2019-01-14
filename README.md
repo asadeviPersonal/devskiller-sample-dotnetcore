@@ -4,8 +4,8 @@
 **TIP**: Please make sure to read [Getting started with programming tasks](https://help.devskiller.com/creating-tasks-and-tests/getting-started-with-programming-tasks) first.
 
 You can start with our sample project that can be found on GitHub:
-[Open sample project](TODO link)
-[Download sample project](TODO link)
+[Open sample project](https://github.com/Devskiller/devskiller-sample-dotnetcore)
+[Download sample project](https://github.com/Devskiller/devskiller-sample-dotnetcore/archive/master.zip)
 
 ## Automatic assessment
 It is possible to automatically assess a solution posted by the candidate.
@@ -20,7 +20,7 @@ There are two kinds of unit tests:
 After the candidate finishes the test, our platform builds the project posted by the candidate and executes the verification tests and static code analysis.
 
 ## Technical details for .NET Core support
-To create automatic assessment, you'll need compilable **.NET Core solution** along with working unit tests. Any language of .NET platform can be used **(C#, F#, VisualBasic)**, though this article focus on c# only. Currently Devskiller platform supports .NET Core version: *2.1*
+To create automatic assessment, you'll need compilable **.NET Core solution** along with working unit tests. Any language of .NET platform can be used **(C#, F#, VisualBasic)**, though this article focus on c# only. Currently Devskiller platform supports .NET Core version: *2.0-2.2.1*
 `Dotnet command` will be used to build, restore packages and test your code. You can use any unit-testing framework like **NUnit, XUnit or MSTest**. 
 Please refer to [msdn](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) for details about using testing frameworks.
 
