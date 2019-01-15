@@ -6,37 +6,22 @@ namespace CalculatorSample
     {
         public int Add(int a, int b)
         {
-            checked
-            {
-                return a + b;
-            }
+          throw new NotImplementedException();
         }
 
         public int Substract(int a, int b)
         {
-            checked
-            {
-                return a - b;
-            }
+            throw new NotImplementedException();
         }
 
         public int Multiply(int a, int b)
         {
-            checked
-            {
-                return a * b;
-            }
+            throw new NotImplementedException();
         }
 
         public double Divide(int a, int b)
         {
-            checked
-            {
-                if(b==0)
-                    throw new DivideByZeroException();
-                var result = (double) a / b;
-                return result;
-            }
+            throw new NotImplementedException();
         }
     }
 }
