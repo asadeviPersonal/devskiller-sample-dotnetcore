@@ -20,9 +20,10 @@ There are two kinds of unit tests:
 After the candidate finishes the test, our platform builds the project posted by the candidate and executes the verification tests and static code analysis.
 
 ## Technical details for .NET Core support
-To create automatic assessment, you'll need compilable **.NET Core solution** along with working unit tests. Any language of .NET platform can be used **(C#, F#, VisualBasic)**, though this article focus on c# only. Currently Devskiller platform supports .NET Core version: *2.0-2.2.1*
+To create automatic assessment, you'll need compilable **.NET Core solution** along with working unit tests. Any language of .NET platform can be used **(C#, F#, VisualBasic)**, though this article focus on c# only. Currently Devskiller platform supports .NET Core version: *1.0-2.2.1*
 `Dotnet command` will be used to build, restore packages and test your code. You can use any unit-testing framework like **NUnit, XUnit or MSTest**. 
 Please refer to [msdn](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) for details about using testing frameworks.
+Don't forget to add reference to `Microsoft.NET.Test.Sdk` in your test projects.
 
 
 ## Preparing solution for automatic tests
