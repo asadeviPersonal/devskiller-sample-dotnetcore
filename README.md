@@ -48,7 +48,7 @@ CalculatorTask
 │      Tests.cs
 │   
 └───CalculatorSample.VerifyTests
-	   CalculatorSample.sln
+       CalculatorSample.sln
        CalculatorSample.VerifyTests.csproj
        VerifyTests.cs	
 ```
@@ -62,9 +62,9 @@ Programming task can be configured with the Devskiller project descriptor file. 
   "readOnlyFiles" : [ "CalculatorSample.sln" ],
   "verification" : {
     "testNamePatterns" : [".*VerifyTests.*"],
-    "pathPatterns" : ["**VerifyTests**"],
+    "pathPatterns" : ["CalculatorSample.VerifyTests/**"],
     "overwrite" : {
-		"CalculatorSample.VerifyTests/CalculatorSample.sln" : "CalculatorSample.sln"
+	 "CalculatorSample.VerifyTests/CalculatorSample.sln" : "CalculatorSample.sln"
     }
   }
 }
@@ -78,7 +78,7 @@ In example above, by setting `readOnlyFiles` field with a solution file, we make
 ```
 - `pathPatterns` - an array of GLOB patterns which should match all the files containing verification tests. All the files that match defined patterns will be deleted from candidates projects and will be added to the projects during the verification phase. 
 ```
-"pathPatterns" : ["**VerifyTests**"]
+"pathPatterns" : ["CalculatorSample.VerifyTests/**"]
 ```
 
 Because files with verification tests will be deleted from candidates projects, you need to make sure, that during final solution build, Devskiller platform will be aware of them.
