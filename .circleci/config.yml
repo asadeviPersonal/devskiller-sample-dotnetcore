@@ -1,0 +1,24 @@
+version: 2.1
+orbs:
+  dotnet-tools: bwp-orbs/dotnet-tools@30.0.0
+  
+jobs:
+  build:
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:2.1
+    
+    steps:
+      - checkout
+      - run:
+          name: Restore solution
+          command: dotnet restore 
+      - run:
+          name: Build solution
+          command: dotnet build   
+          
+      - run:
+          name: Run tests 
+          command: dotnet test --no-build --logger "trx;LogFileName=/root/project/tests/TestResult/xunit-output.xml"
+      - store_artifacts:
+          path: /root/project/tests/TestResult/
+          when: always
